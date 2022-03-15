@@ -24,20 +24,16 @@
 
 import random
 
-
 destination_list = ['england', 'toronto', 'miami']
 
-restuarant_list = ['bistro', 'pizza', 'diner']
+restuarant_list = ['bistro bar', 'pizza shop', 'wing shop']
 
 transportation_list = ['helicopter', 'taxi', 'subway']
 
 entertainment_list = ['comedy show', 'concert', 'sporting event']
 
-# Get a random element from each of those sets of options. We recommend declaring variables for a random destination, restaurant, transportation, and entertainment
 
 # Initial function
-
-#note- orginal random function didnt work, try with each list seperatly.
 
 def get_choice(choice_list, choice_type):
     random_choice = '0'
@@ -56,31 +52,18 @@ def get_choice(choice_list, choice_type):
 
     return(random_choice)
 
-def run_trip_gen():
-    user_conformation = 'n'
-    while user_conformation == 'n':
-        
-        destination_list = '0'
-        if destination_list == destination:
-            destination = get_choice(destination_list, 'destination')
-        
-        restuarant_list = '0'
-        if restuarant_list == restuarant:
-             restuarant = get_choice(restuarant_list, 'restuarant')
-        
-        entertainment_list = '0'
-        if entertainment_list == entertainment:
-             entertainment = get_choice(entertainment_list, 'entertainment')
-        
-        transportation_list = '0'
-        if transportation_list == transportation:
-            transportation = get_choice(transportation_list, 'transportation')
+destination = get_choice(destination_list, 'destination')
+restuarant = get_choice(restuarant_list, 'restuarant')
+entertainment = get_choice(entertainment_list, 'entertainment')
+transportation = get_choice(transportation_list, 'transportation')
 
-user_confirmation = input(f'You will be going to {destination_list}, have a great time at the {entertainment_list}, followed by a nice meal at{restuarant_list}. You will be using {transportation_list} to get around! Does tthis sound good? y/n ?')
+user_confirmation = input(f'You will be going to {destination}, have a great time at the {entertainment}, followed by a nice meal at a {restuarant}. You will be using a {transportation} to get around! Does tthis sound good? y/n ?')
 if user_confirmation == 'y':
     print('Have a great trip!')
 if user_confirmation == 'n':
     print('Lets try again.')
 
-run_trip_gen()
+
+
+
 
